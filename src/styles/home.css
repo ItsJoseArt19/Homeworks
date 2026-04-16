@@ -1,0 +1,151 @@
+.home-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1abc9c 0%, #16a085 50%, #27ae60 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  background: linear-gradient(90deg, rgba(22, 160, 133, 0.95) 0%, rgba(39, 174, 96, 0.95) 100%);
+  color: white;
+  padding: 25px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  border-bottom: 3px solid #1abc9c;
+}
+
+.navbar h1 {
+  font-size: 32px;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.user-info span {
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 8px 15px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.logout-btn {
+  padding: 12px 25px;
+  background-color: #e67e22;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #d35400;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(230, 126, 34, 0.4);
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.welcome-card {
+  background: white;
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 600px;
+  border-top: 6px solid #1abc9c;
+  position: relative;
+  overflow: hidden;
+}
+
+.welcome-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(26, 188, 156, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.welcome-card h2 {
+  color: #1abc9c;
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+}
+
+.welcome-card p {
+  color: #555;
+  margin: 12px 0;
+  font-size: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.user-email {
+  font-size: 20px;
+  color: #16a085;
+  font-weight: bold;
+  margin: 25px 0 !important;
+  padding: 15px;
+  background: linear-gradient(135deg, #d5f4e6 0%, #e8f8f5 100%);
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .user-info {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .navbar h1 {
+    font-size: 26px;
+  }
+
+  .welcome-card {
+    padding: 30px 20px;
+  }
+
+  .welcome-card h2 {
+    font-size: 28px;
+  }
+
+  .welcome-card p {
+    font-size: 14px;
+  }
+
+  .user-email {
+    font-size: 16px;
+  }
+}
