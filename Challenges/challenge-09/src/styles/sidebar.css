@@ -1,0 +1,169 @@
+/* Estilos de Barra Lateral - Consistente con challenges anteriores */
+.sidebar {
+  width: 280px;
+  background: linear-gradient(135deg, #1abc9c 0%, #16a085 50%, #0e5250 100%);
+  border-right: 5px solid #0e5250;
+  overflow-y: auto;
+  box-shadow: 4px 0 15px rgba(22, 160, 133, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  padding: 25px 20px;
+  background: linear-gradient(135deg, #0e5250 0%, #0a3d38 100%);
+  border-bottom: 3px solid #1abc9c;
+}
+
+.sidebar-header h2 {
+  color: #1abc9c;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 20px 0;
+  overflow-y: auto;
+}
+
+/* Estilos del Item del Menú */
+.menu-item-container {
+  transition: all 0.2s ease;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 0.95rem;
+  border-left: 4px solid transparent;
+  position: relative;
+}
+
+.menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-left-color: #1abc9c;
+  padding-left: 20px;
+}
+
+.menu-item.active {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.1) 100%);
+  border-left-color: #fff;
+  font-weight: 600;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item.has-children {
+  font-weight: 500;
+}
+
+/* Flecha de Alternar */
+.toggle-arrow {
+  display: inline-block;
+  width: 16px;
+  text-align: center;
+  margin-right: 10px;
+  font-size: 0.75rem;
+  transition: transform 0.3s ease;
+  color: #1abc9c;
+}
+
+.toggle-arrow.empty {
+  color: transparent;
+  visibility: hidden;
+}
+
+.toggle-arrow.expanded {
+  transform: rotate(90deg);
+}
+
+/* Icono del Menú */
+.menu-icon {
+  display: inline-block;
+  width: 20px;
+  text-align: center;
+  margin-right: 12px;
+  font-size: 1.1rem;
+}
+
+/* Título del Menú */
+.menu-title {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Hijos del Menú */
+.menu-children {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-left: 3px solid #1abc9c;
+  animation: expandMenu 0.2s ease-out;
+}
+
+@keyframes expandMenu {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 500px;
+  }
+}
+
+/* Estilo de barra de desplazamiento de Sidebar */
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Diseño Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 250px;
+    position: fixed;
+    left: -250px;
+    height: 100vh;
+    top: 0;
+    z-index: 1000;
+    transition: left 0.3s ease;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .sidebar-nav {
+    padding: 15px 0;
+  }
+
+  .menu-item {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Transiciones suaves */
+.sidebar-nav {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.1);
+}
