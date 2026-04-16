@@ -1,0 +1,300 @@
+.app {
+  min-height: 100vh;
+  background: #fff;
+}
+
+.header {
+  background: #fff;
+  padding: 1.5rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #000;
+  text-align: center;
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.container {
+  margin-bottom: 2rem;
+}
+
+/* ESTADÍSTICAS */
+.statistics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: #f5f5f5;
+  padding: 1rem;
+  border: 1px solid #ddd;
+}
+
+.stat-card h3 {
+  font-size: 0.9rem;
+  margin: 0 0 0.5rem 0;
+  color: #666;
+}
+
+.stat-number {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+  color: #000;
+}
+
+/* SECCIONES */
+.section {
+  background: #fff;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid #ddd;
+}
+
+.section h2 {
+  color: #000;
+  margin: 0 0 1rem 0;
+  font-size: 1.3rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+/* VEHÍCULO DESTACADO */
+.featured-vehicle {
+  background: #fff;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid #ddd;
+}
+
+.featured-vehicle h2 {
+  color: #000;
+  margin: 0 0 1rem 0;
+  font-size: 1.3rem;
+}
+
+.featured-card {
+  background: #f9f9f9;
+  color: #000;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+}
+
+.featured-content h3 {
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.featured-content p {
+  font-size: 1rem;
+  margin: 0.3rem 0;
+}
+
+.featured-content small {
+  display: block;
+  margin-top: 0.5rem;
+  color: #999;
+}
+
+/* FORMULARIO DE ALQUILER */
+.rental-form {
+  margin: 1rem 0;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+.input:focus {
+  outline: 1px solid #000;
+}
+
+/* LISTA DE VEHÍCULOS */
+.vehicles-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.vehicle-card {
+  background: #f5f5f5;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.vehicle-info h3 {
+  color: #000;
+  margin: 0 0 0.3rem 0;
+  font-size: 1rem;
+}
+
+.vehicle-info p {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0.2rem 0;
+}
+
+/* BOTONES */
+.btn-rent, .btn-return {
+  padding: 0.5rem 1rem;
+  border: 1px solid #000;
+  background: #fff;
+  color: #000;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.btn-rent:hover:not(:disabled) {
+  background: #000;
+  color: #fff;
+}
+
+.btn-rent:disabled {
+  background: #ddd;
+  color: #999;
+  border-color: #ddd;
+  cursor: not-allowed;
+}
+
+.btn-return {
+  background: #fff;
+  border: 1px solid #000;
+  color: #000;
+}
+
+.btn-return:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* HISTORIAL DE ALQUILERES */
+.rental-history {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.rental-record {
+  background: #f5f5f5;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.rental-details h4 {
+  color: #000;
+  margin: 0 0 0.3rem 0;
+  font-size: 1rem;
+}
+
+.rental-details p {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0.2rem 0;
+}
+
+.status {
+  font-weight: bold;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.8rem;
+}
+
+.status.activo {
+  background: #ffffcc;
+  color: #000;
+}
+
+.status.completado {
+  background: #ccffcc;
+  color: #000;
+}
+
+/* INVERSIONISTAS */
+.investors-section {
+  margin-top: 1.5rem;
+}
+
+.investors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.investor-card {
+  background: #f5f5f5;
+  padding: 1rem;
+  border: 1px solid #ddd;
+}
+
+.investor-card h3 {
+  color: #000;
+  margin: 0 0 0.3rem 0;
+  font-size: 1rem;
+}
+
+.investor-card p {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0.2rem 0;
+}
+
+/* MENSAJE VACÍO */
+.empty-message {
+  text-align: center;
+  color: #999;
+  padding: 1rem;
+  font-size: 0.95rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+
+  .statistics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .vehicles-list {
+    grid-template-columns: 1fr;
+  }
+
+  .investors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rental-record {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-rent, .btn-return {
+    width: 100%;
+  }
+}
