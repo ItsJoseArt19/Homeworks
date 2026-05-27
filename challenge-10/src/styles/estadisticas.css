@@ -1,0 +1,172 @@
+.estadisticas {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.estadisticas h3 {
+  color: #16a085;
+  margin-bottom: 20px;
+  font-size: 1.3em;
+  text-align: center;
+}
+
+.contenedor-stats {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #1abc9c 0%, #16a085 100%);
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(26, 188, 156, 0.3);
+}
+
+.stat-card .numero {
+  font-size: 2.2em;
+  font-weight: 700;
+  margin-bottom: 5px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.stat-card .label {
+  font-size: 0.9em;
+  font-weight: 600;
+  opacity: 0.95;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.top-ciudades {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 10px;
+  padding: 15px;
+  border-top: 3px solid #1abc9c;
+}
+
+.top-ciudades h4 {
+  color: #16a085;
+  font-size: 1em;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.top-ciudades ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.top-ciudades li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  background: white;
+  border-radius: 6px;
+  border-left: 4px solid #1abc9c;
+  font-size: 0.9em;
+  transition: all 0.3s ease;
+}
+
+.top-ciudades li:hover {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  transform: translateX(3px);
+}
+
+.top-ciudades .posicion {
+  background: #1abc9c;
+  color: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  flex-shrink: 0;
+  font-size: 0.85em;
+}
+
+.top-ciudades .nombre {
+  flex: 1;
+  margin: 0 10px;
+  color: #333;
+  font-weight: 600;
+}
+
+.top-ciudades .cantidad {
+  background: #16a085;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.85em;
+  font-weight: 600;
+}
+
+/* Información del nodo seleccionado */
+.info-nodo {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid #ffd700;
+}
+
+.info-nodo h3 {
+  color: #16a085;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+.detalles-nodo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.detalles-nodo p {
+  color: #333;
+  font-size: 0.95em;
+  padding: 8px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border-left: 3px solid #1abc9c;
+}
+
+.detalles-nodo strong {
+  color: #16a085;
+  font-weight: 700;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .estadisticas {
+    padding: 20px;
+  }
+
+  .contenedor-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card .numero {
+    font-size: 1.8em;
+  }
+}

@@ -1,0 +1,134 @@
+.lista-personas-ciudad {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.lista-personas-ciudad h3 {
+  color: #667eea;
+  margin-bottom: 20px;
+  font-size: 1.3em;
+}
+
+.selector-ciudad {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+.selector-ciudad label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 0.95em;
+}
+
+.selector-ciudad select {
+  padding: 12px 15px;
+  border: 2px solid #1abc9c;
+  border-radius: 8px;
+  font-size: 1em;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.selector-ciudad select:hover,
+.selector-ciudad select:focus {
+  border-color: #16a085;
+  background: #f8f9fa;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(26, 188, 156, 0.1);
+}
+
+.resultado {
+  margin-top: 20px;
+}
+
+.resultado h4 {
+  color: #16a085;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #1abc9c;
+}
+
+.lista-personas {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.item-persona {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 8px;
+  border-left: 5px solid #1abc9c;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.item-persona:hover {
+  background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(26, 188, 156, 0.2);
+}
+
+.item-persona .icono {
+  font-size: 1.5em;
+  flex-shrink: 0;
+}
+
+.info-persona {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+
+.info-persona strong {
+  color: #333;
+  font-size: 1.05em;
+}
+
+.info-persona .edad {
+  color: #1abc9c;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+.info-persona .amigos {
+  color: #16a085;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.sin-resultados {
+  padding: 30px;
+  text-align: center;
+  color: #999;
+  background: #f8f9fa;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .lista-personas-ciudad {
+    padding: 20px;
+  }
+
+  .item-persona {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .selector-ciudad select {
+    font-size: 16px; /* Prevenir zoom en iOS */
+  }
+}

@@ -1,0 +1,109 @@
+.formulario-ciudad,
+.formulario-persona,
+.formulario-amistad {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.formulario-ciudad:hover,
+.formulario-persona:hover,
+.formulario-amistad:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.formulario-ciudad h3,
+.formulario-persona h3,
+.formulario-amistad h3 {
+  color: #16a085;
+  margin-bottom: 20px;
+  font-size: 1.3em;
+}
+
+.grupo-campo {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.grupo-campo label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 0.95em;
+}
+
+.grupo-campo input,
+.grupo-campo select {
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+}
+
+.grupo-campo input:focus,
+.grupo-campo select:focus {
+  outline: none;
+  border-color: #1abc9c;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(26, 188, 156, 0.1);
+}
+
+.grupo-campo input::placeholder {
+  color: #999;
+}
+
+.boton-agregar {
+  width: 100%;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #1abc9c 0%, #16a085 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.boton-agregar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(26, 188, 156, 0.4);
+}
+
+.boton-agregar:active {
+  transform: translateY(0);
+}
+
+.error {
+  color: #d32f2f;
+  background: #ffebee;
+  border: 2px solid #d32f2f;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 15px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .formulario-ciudad,
+  .formulario-persona,
+  .formulario-amistad {
+    padding: 20px;
+  }
+
+  .grupo-campo input,
+  .grupo-campo select {
+    font-size: 16px; /* Prevenir zoom en iOS */
+  }
+}
