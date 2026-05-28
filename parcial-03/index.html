@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Musica educativa - Parcial 03</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Mini plataforma musical educativa</p>
+        <h1>Musica educativa</h1>
+        <p class="hero__text">
+          Busca canciones de salsa, bachata y merengue, descubre recomendaciones relacionadas y consulta el ranking de popularidad.
+        </p>
+      </div>
+      <div class="hero__badge">
+        <span>Trie</span>
+        <span>Heap</span>
+        <span>Grafo</span>
+        <span>Sass</span>
+      </div>
+    </section>
+
+    <section class="dashboard">
+      <article class="panel ranking-panel">
+        <div class="panel__header">
+          <div>
+            <p class="section-label">Ranking musical</p>
+            <h2>Top canciones</h2>
+          </div>
+          <span class="chip">Max Heap</span>
+        </div>
+
+        <ol id="rankingList" class="ranking"></ol>
+      </article>
+
+      <article class="panel search-panel">
+        <div class="panel__header">
+          <div>
+            <p class="section-label">Buscador predictivo</p>
+            <h2>Buscar canciones</h2>
+          </div>
+          <span class="chip">Trie</span>
+        </div>
+
+        <label for="songSearch">Escribe un titulo o prefijo</label>
+        <input id="songSearch" type="text" placeholder="Ej: Oh, Sin, Pedro, Obsesion..." autocomplete="off">
+
+        <p id="searchResult" class="message">Empieza a escribir para ver sugerencias.</p>
+        <ul id="suggestionsList" class="suggestions"></ul>
+      </article>
+
+      <article class="panel recommendations-panel">
+        <div class="panel__header">
+          <div>
+            <p class="section-label">Canciones relacionadas</p>
+            <h2>Recomendaciones</h2>
+          </div>
+          <span class="chip">Grafo</span>
+        </div>
+
+        <label for="songSelect">Selecciona una cancion</label>
+        <select id="songSelect"></select>
+
+        <div id="recommendationsList" class="recommendations"></div>
+      </article>
+
+      <article class="panel insert-panel">
+        <div class="panel__header">
+          <div>
+            <p class="section-label">Agregar cancion</p>
+            <h2>Insertar en el sistema</h2>
+          </div>
+          <span class="chip">Insert</span>
+        </div>
+
+        <form id="songForm" class="song-form">
+          <label for="newTitle">Titulo</label>
+          <input id="newTitle" type="text" placeholder="Nombre de la cancion" required>
+
+          <label for="newArtist">Artista</label>
+          <input id="newArtist" type="text" placeholder="Nombre del artista" required>
+
+          <label for="newGenre">Genero</label>
+          <select id="newGenre" required>
+            <option value="Salsa">Salsa</option>
+            <option value="Bachata">Bachata</option>
+            <option value="Merengue">Merengue</option>
+            <option value="Reggaeton">Reggaeton</option>
+            <option value="Pop">Pop</option>
+            <option value="Rock">Rock</option>
+            <option value="Rap">Rap</option>
+            <option value="Vallenato">Vallenato</option>
+            <option value="Cumbia">Cumbia</option>
+            <option value="Electronica">Electronica</option>
+            <option value="Balada">Balada</option>
+            <option value="Jazz">Jazz</option>
+          </select>
+
+          <button type="submit">Agregar cancion</button>
+        </form>
+        <p id="insertMessage" class="message">El sistema asigna las reproducciones y agrega la cancion al Trie, ranking y grafo.</p>
+      </article>
+
+      <article class="panel info-panel">
+        <p class="section-label">Resumen tecnico</p>
+        <h2>Estructuras usadas</h2>
+        <ul>
+          <li><strong>Trie:</strong> guarda titulos musicales y permite sugerencias por prefijo.</li>
+          <li><strong>Max Heap:</strong> ordena canciones desde la mas escuchada.</li>
+          <li><strong>Grafo no dirigido:</strong> conecta canciones similares en ambos sentidos.</li>
+          <li><strong>Sass:</strong> reutiliza variables, mixins y estilos por componentes.</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

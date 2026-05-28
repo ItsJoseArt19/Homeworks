@@ -1,0 +1,18 @@
+{
+  "name": "parcial-03-musica-educativa",
+  "version": "1.0.0",
+  "description": "Mini plataforma de musica educativa con Trie, Max Heap, grafo no dirigido y Sass.",
+  "main": "app.js",
+  "scripts": {
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "trie",
+    "heap",
+    "grafo",
+    "sass",
+    "musica"
+  ],
+  "author": "",
+  "license": "ISC"
+}

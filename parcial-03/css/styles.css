@@ -1,0 +1,266 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, rgba(29, 185, 84, 0.24), transparent 30rem), linear-gradient(135deg, #000000, #121212 58%, #050505);
+  color: #f4f7f5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app {
+  width: min(1180px, 100% - 2rem);
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  min-height: 210px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(145deg, #121212, #1f1f1f);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 6vw, 4.8rem);
+}
+
+.hero__text {
+  max-width: 640px;
+  color: #a7adb8;
+  line-height: 1.6;
+}
+
+.hero__badge {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(80px, 1fr));
+  gap: 0.75rem;
+}
+
+.hero__badge span {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  color: #1ed760;
+  font-weight: 700;
+}
+
+.eyebrow,
+.section-label {
+  margin: 0 0 0.5rem;
+  color: #1ed760;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 1rem;
+}
+
+.panel {
+  background: linear-gradient(145deg, #121212, #1f1f1f);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+  padding: 1.3rem;
+}
+
+.ranking-panel {
+  grid-row: span 2;
+}
+
+.panel h2 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.panel label {
+  display: block;
+  margin: 1rem 0 0.5rem;
+  color: #a7adb8;
+  font-size: 0.92rem;
+}
+
+.panel input,
+.panel select,
+.panel button {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background: #121419;
+  color: #f4f7f5;
+  font: inherit;
+  outline: none;
+  padding: 0.9rem 1rem;
+}
+
+.panel input:focus,
+.panel select:focus,
+.panel button:focus {
+  border-color: #1ed760;
+  box-shadow: 0 0 0 3px rgba(29, 185, 84, 0.14);
+}
+
+.panel button {
+  margin-top: 1rem;
+  border: 0;
+  background: #1db954;
+  color: #000000;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.panel button:hover {
+  background: #1ed760;
+}
+
+.panel__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(29, 185, 84, 0.13);
+  color: #1ed760;
+  font-size: 0.8rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.message {
+  min-height: 24px;
+  margin: 1rem 0;
+  color: #a7adb8;
+}
+
+.suggestions {
+  display: grid;
+  gap: 0.6rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.suggestions li {
+  padding: 0.8rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border-left: 4px solid #1ed760;
+}
+
+.ranking {
+  display: grid;
+  gap: 0.75rem;
+  padding: 0;
+  margin: 1rem 0 0;
+  list-style: none;
+}
+
+.ranking li {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.ranking small {
+  display: block;
+  margin-top: 0.2rem;
+  color: #a7adb8;
+}
+
+.ranking__position {
+  color: #1ed760;
+  font-weight: 800;
+}
+
+.ranking__plays {
+  color: #1db954;
+  font-weight: 700;
+}
+
+.recommendations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.recommendations span,
+.recommendations p {
+  margin: 0;
+  border-radius: 999px;
+  padding: 0.7rem 0.9rem;
+  background: rgba(29, 185, 84, 0.14);
+  color: #d8ffe4;
+}
+
+.song-form {
+  display: grid;
+}
+
+.info-panel ul {
+  display: grid;
+  gap: 0.75rem;
+  padding-left: 1.1rem;
+  color: #a7adb8;
+  line-height: 1.5;
+}
+
+.info-panel strong {
+  color: #f4f7f5;
+}
+
+@media (max-width: 760px) {
+  .hero,
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .ranking-panel {
+    grid-row: auto;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero__badge {
+    width: 100%;
+  }
+
+  .ranking li {
+    grid-template-columns: auto 1fr;
+  }
+
+  .ranking__plays {
+    grid-column: 2;
+  }
+}
